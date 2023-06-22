@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S Allana Travel</title>
+
+    <style>
+        <!-- /*requirements margin, padding, font-size, font-weight, color, background (with linear-gradient), line-height, box-shadow, border, transition*/--!>
+            
+            
+            .pageContent {
+                    background-color: transparent !important ;
+                    background-image: linearGradient(  pink, aliceblue , purple);
+                    margin: 0% auto;
+                    width: 80%;
+            }
+
+            .travelPic {
+                display: block;
+                margin: 0% auto;
+                max-width: 90%;
+                border-radius: 2%;
+                border-color: blueviolet ;
+                border-style: groove;
+                border-width: 1%;
+
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 4em;
+                font-weight: 5em ;
+                
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 2em;
+            }
+
+            
+            div {
+                padding-left:2%;
+                line-height: 1.5;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            a {
+                color:black;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: blueviolet;
+                text-decoration: underline;
+            }
+
+            button {
+                display: block;
+                text-align: center;
+                padding: 3%;
+                margin:0% auto;
+                box-shadow: rgb(235, 235, 235) 3px 2px;
+                font-size: 1em;
+                background-color: aquamarine;
+                border: 1px;  
+            }
+
+            button:hover {
+                background-color: blue;
+
+            }
+
+            footer {
+                text-align: center;
+                padding:2%;
+                background-color: rgb(214, 214, 214);
+            }
+    </style>
+</head>
+<body>
+    <!-- requirements h1, h2, p, div, span, strong, em, br, hr, a, img, button-->
+
+    <div class="pageContent">
+
+        <h1> Tavel & <em> Tourism </em> </h1>
+
+
+        <h2>
+            <strong> "To Travel is to Live" </strong>
+        </h2>
+
+        <img class="travelPic" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/498/original/pexels-lara-jameson-8828448.jpg?1687294766" alt="passion" >
+
+        <div class="countryList">
+
+            <p>
+                Traveling is, and always has been something I am very passionate about. It is one of my favorite things to do.
+                Nothing beats the thrill of exploring new places and gaining new experiences; and I have been fortunate enough
+                to travel quite a bit so far.
+            </p>
+
+
+
+            <p> Some of the places I have been to so far, include:
+                <br>
+                    
+                    <ul>
+                        <span class="countries">
+                            <li> <a href="https://www.worldatlas.com/maps/united-kingdom/england" target="_blank"> England </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/united-kingdom/scotland" target="_blank"> Scotland </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/portugal" target="_blank"> Portugal </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/france" target="_blank"> France </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/netherlands" target="_blank"> Netherlands </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/thailand" target="_blank"> Thailand </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/singapore" target="_blank"> Singapore </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/australia" target="_blank"> Australia </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/mozambique" target="_blank"> Mozambique </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/china" target="_blank"> China </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/saudi-arabia" target="_blank"> Saudi Arabia </a> </li>
+                            <li> <a href="https://www.worldatlas.com/maps/united-arab-emirates" target="_blank"> United Arab Emirates </a> </li>
+                        </span>
+                    </ul>
+            
+            
+                ...with hopefully many more to come ✈️✈️✈️
+            </p>
+        </div>    
+        
+            <button>
+                🌍 Do you like traveling to?
+            </button>
+
+    </div>
+
+    <br>
+
+    <footer>
+        ⌨️ Coded by Sumayya Allana 🧕🏻
+        </footer>
+
+    </div>
+
+
+    <script>
+        <!-- //requirements let, if, else, alert, prompt, event // --!>
+        
+        function travelQs() {
+            let answer = prompt("Do you enjoy traveling too?");
+
+            if (answer = yes) {
+                let destinations = prompt ("Where would your still like to travel to?");
+                let h2 = document.querySelector("h2");
+                h2.innerHTML ="Awesome hopefully you will soon get to travel to " + destinations;
+
+            } else {
+                alert ("Awwhhh😔, I'm sorry to hear that")
+            }
+        }
+
+
+        let travelButton = document.querySelector ("button");
+        travelButton.addEventListener("click", travelQs);
+
+    </script>
+</body>
+
+
+</html>
