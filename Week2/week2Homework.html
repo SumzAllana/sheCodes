@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes</title>
+
+    <style>
+        body {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #heading {
+        color: rgb(78, 78, 255);
+        }
+
+        h2 {
+        font-size: large ;
+        }
+
+        ul {
+        text-align: center;
+        list-style-type: none;
+        }
+
+        li {
+        text-align: center;
+        padding-top: 1.5vw;
+        padding-bottom: 3vw;
+        }
+
+        li:hover {
+        text-align: center;
+        display: block;
+        border-style:hidden;
+        background-color: rgb(248, 233, 221);
+        padding-top: 1.5vw;
+        padding-bottom: 3vw;
+        }
+
+        button {
+        display: block;
+        margin: 0 auto;
+        padding: 3vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        border-style:solid;
+        border-radius: 25%;
+        background-color: blue;
+        color: aliceblue;
+        }
+
+        button:hover{
+        background-color:white ;
+        color: black;
+        }
+
+        footer {
+        padding: 5vw;
+        }
+        </style>
+</head>
+<body>
+    
+    <ul>
+    <div id="PageInfo">
+        <h2 id="heading">🌥️</h2>
+        <h1 id="heading">Currently 21° in Tokyo</h1>
+        <h1>21° / <strong> 23° </strong></h1>
+    </div>
+
+    <li>
+        <h2>🌧️ Tomorrow</h2>
+        10° /
+        <strong> 22° </strong>
+    </li>
+
+    <li>
+        <h2>🌥️ Saturday</h2>
+        15° /
+        <strong> 17° </strong>
+    </li>
+
+    <li>
+        <h2>☀️ Sunday</h2>
+        25° /
+        <strong> 28°</strong>
+    </li>
+    </ul>
+
+    <button class="changeCity"> Change City </button>
+
+    <footer>
+    <p>Coded by Sumayya Allana</p>
+    </footer>
+        
+        <script>
+
+            function changePlace() {
+            let location = prompt ("What city do you live in?");
+            let temp = prompt ("What temperature is it?");
+            
+            let heading = document.querySelector("h1"); 
+            heading.innerHTML = "Currently" + " " + temp + " " + "in" + " " + location;
+
+            }
+
+            let city = document.querySelector("button");
+
+            city.addEventListener("click", changePlace);
+        
+        </script>
+    </body>
+</html>
