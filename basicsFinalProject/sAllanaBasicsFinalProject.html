@@ -8,12 +8,18 @@
     <style>
         <!-- /*requirements margin, padding, font-size, font-weight, color, background (with linear-gradient), line-height, box-shadow, border, transition*/--!>
             
+            body {
+                display:block;
+                background-color: transparent;
+                background-image: linear-gradient(pink,rgb(212, 4, 212),rgb(50, 50, 248));
+            }
             
             .pageContent {
-                    background-color: transparent !important ;
-                    background-image: linearGradient(  pink, aliceblue , purple);
                     margin: 0% auto;
                     width: 80%;
+                    background-color: transparent;
+                    background-image: linear-gradient(rgb(86, 86, 255),rgb(212, 4, 212),pink);
+                    padding-right: 0%;
             }
 
             .travelPic {
@@ -39,7 +45,6 @@
                 font-size: 2em;
             }
 
-            
             div {
                 padding-left:2%;
                 line-height: 1.5;
@@ -66,18 +71,27 @@
                 margin:0% auto;
                 box-shadow: rgb(235, 235, 235) 3px 2px;
                 font-size: 1em;
-                background-color: aquamarine;
+                background-color: rgb(156, 254, 221);
                 border: 1px;  
             }
 
             button:hover {
-                background-color: blue;
+                background-color: rgb(254, 243, 30);
+                color:darkslateblue;
+                transition: ease-in-out;
+                transition-duration: 3s;
 
+            }
+
+            hr {
+                border-style: ridge;
+                border-color: lavender;
             }
 
             footer {
                 text-align: center;
-                padding:2%;
+                font-size: 1.5em;
+                padding:5%;
                 background-color: rgb(214, 214, 214);
             }
     </style>
@@ -87,7 +101,7 @@
 
     <div class="pageContent">
 
-        <h1> Tavel & <em> Tourism </em> </h1>
+        <h1> Travel & <em> Tourism </em> </h1>
 
 
         <h2>
@@ -132,12 +146,14 @@
         </div>    
         
             <button>
-                🌍 Do you like traveling to?
+                🌍 Do you like traveling too?
             </button>
 
     </div>
 
     <br>
+
+    <hr>
 
     <footer>
         ⌨️ Coded by Sumayya Allana 🧕🏻
@@ -152,16 +168,14 @@
         function travelQs() {
             let answer = prompt("Do you enjoy traveling too?");
 
-            if (answer = yes) {
-                let destinations = prompt ("Where would your still like to travel to?");
+            if (answer === "yes") {
+                let destinations = prompt ("Where would you still like to travel to?");
                 let h2 = document.querySelector("h2");
-                h2.innerHTML ="Awesome hopefully you will soon get to travel to " + destinations;
-
+                h2.innerHTML ="Awesome!💃🏻 Hopefully we'll soon meet each other in... " + destinations;
             } else {
                 alert ("Awwhhh😔, I'm sorry to hear that")
             }
         }
-
 
         let travelButton = document.querySelector ("button");
         travelButton.addEventListener("click", travelQs);
